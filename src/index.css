@@ -1,0 +1,17 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.page-layout {
+  @apply sm:mx-20 mx-10;
+  /* @apply sm:mx-20 mx-10 max-w-3xl; */
+  /* width: 80%; */
+}
+
+.page-button {
+  @apply px-4 py-3 bg-blue-700 text-white rounded;
+}
+
+.page-card {
+  @apply drop-shadow-lg hover:drop-shadow-xl h-80 w-60 rounded transition ease-out hover:-translate-y-3 duration-500 cursor-pointer;
+}
