@@ -19,3 +19,7 @@
 .social-icon {
   @apply pr-3 h-7 w-7 transition ease-out hover:scale-125 duration-500 cursor-pointer;
 }
+
+.section-header {
+  @apply my-8 text-3xl text-blue-400;
+}

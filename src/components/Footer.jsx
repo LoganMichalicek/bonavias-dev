@@ -16,10 +16,18 @@ const Footer = () => {
       </div>
       <div className="flex items-center">
         <p className="pr-3">Follow Us!</p>
-        <FaFacebookSquare className="social-icon" />
-        <FaTwitter className="social-icon" />
-        <FaInstagram className="social-icon" />
-        <FaYoutube className="social-icon" />
+        <Link to="/#">
+          <FaFacebookSquare className="social-icon" />
+        </Link>
+        <Link to="/#">
+          <FaTwitter className="social-icon" />
+        </Link>
+        <Link to="/#">
+          <FaInstagram className="social-icon" />
+        </Link>
+        <Link to="/#">
+          <FaYoutube className="social-icon" />
+        </Link>
       </div>
     </div>
   );
