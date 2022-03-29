@@ -8,6 +8,8 @@ import Gallery from "./pages/gallery";
 import Testimonials from "./pages/testimonials";
 import Donate from "./pages/donate";
 import Contact from "./pages/contact";
+import Terms from "./pages/terms";
+import Privacy from "./pages/privacy";
 import Dropdown from "./components/Dropdown";
 
 export default function App() {
@@ -28,6 +30,8 @@ export default function App() {
         <Route path="/testimonials" element={<Testimonials />}/>
         <Route path="/donate" element={<Donate />}/>
         <Route path="/contact" element={<Contact />}/>
+        <Route path="/terms" element={<Terms />}/>
+        <Route path="/privacy" element={<Privacy />}/>
       </Routes>
       <Footer />
     </>

@@ -15,3 +15,7 @@
 .page-card {
   @apply drop-shadow-lg hover:drop-shadow-xl h-80 w-60 rounded transition ease-out hover:-translate-y-3 duration-500 cursor-pointer;
 }
+
+.social-icon {
+  @apply pr-3 h-7 w-7 transition ease-out hover:scale-125 duration-500 cursor-pointer;
+}

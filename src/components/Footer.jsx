@@ -4,22 +4,22 @@ import { FaFacebookSquare, FaTwitter, FaInstagram, FaYoutube } from 'react-icons
 
 const Footer = () => {
   return (
-    <div className="h-12 bg-black text-white flex justify-between items-center">
+    <div className="h-12 px-5 bg-black text-white flex justify-between items-center">
       <div className="flex">
         <p className="pl-3">© 2020 The Bona Vias Foundation</p>
         <Link to="/privacy" className="pl-3">
-          <span>Privacy Policy</span>
+          <span className="hover:underline">Privacy Policy</span>
         </Link>
         <Link to="/terms" className="pl-3">
-          <span>Terms of Service</span>
+          <span className="hover:underline">Terms of Service</span>
         </Link>
       </div>
-      <div className="flex">
+      <div className="flex items-center">
         <p className="pr-3">Follow Us!</p>
-        <FaFacebookSquare className="pr-3 h-7 w-7" />
-        <FaTwitter className="pr-3 h-7 w-7" />
-        <FaInstagram className="pr-3 h-7 w-7" />
-        <FaYoutube className="pr-3 h-7 w-7" />
+        <FaFacebookSquare className="social-icon" />
+        <FaTwitter className="social-icon" />
+        <FaInstagram className="social-icon" />
+        <FaYoutube className="social-icon" />
       </div>
     </div>
   );
