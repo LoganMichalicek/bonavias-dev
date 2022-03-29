@@ -29,3 +29,7 @@
 .section-header {
   @apply my-8 text-3xl text-blue-400;
 }
+
+.inset-box {
+  @apply p-5 mt-5 border-2 border-gray-200;
+}
