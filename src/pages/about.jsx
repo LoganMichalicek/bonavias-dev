@@ -7,7 +7,7 @@ const About = () => {
     <div className="">
       <div className="page-layout inline-block align-center">
         {/* About us */}
-        <h2 className="my-16 text-3xl text-blue-400">About Us</h2>
+        <h2 className="section-header">About Us</h2>
         <p className="my-10 text-xl">
           We are working toward our 501(c)(3) charitable organization status.
         </p>
@@ -111,7 +111,7 @@ const About = () => {
         {/* Subject Matter Experts */}
         <div>
           <div className="my-10">
-            <h2 className="text-3xl text-blue-400">Subject Matter Experts</h2>
+            <h2 className="section-header">Subject Matter Experts</h2>
             <p className="my-5">Our resources and services are provided by experts in their fields who have significant experience working with people who very likely asked the same questions and needed the same information as you.  Your counselor may vary depending on your needs, so please be specific when you contact us for more information and when scheduling your appointment.  We want to make sure you get in touch with the right person.</p>
             <Link to="/contact" className="page-button">
               <span className="my-4">
@@ -132,7 +132,7 @@ const About = () => {
         {/* End Subject Matter Experts */}
         {/* Board of Directors */}
         <div className="my-20">
-          <h2 className="text-3xl text-blue-400">Board of Directors</h2>
+          <h2 className="section-header">Board of Directors</h2>
           <p>Click on any image to read the full biography.</p>
           <div className="flex flex-wrap justify-start items-center">
             <PageCard name="Dr. Adrian Michalicek" title="President"/>
