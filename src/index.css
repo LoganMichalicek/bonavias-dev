@@ -3,17 +3,23 @@
 @tailwind utilities;
 
 .page-layout {
-  @apply sm:mx-20 mx-10;
-  /* @apply sm:mx-20 mx-10 max-w-3xl; */
-  /* width: 80%; */
+  @apply sm:mx-20 mx-10 mb-10;
 }
 
 .page-button {
   @apply px-4 py-3 bg-blue-700 text-white rounded;
 }
 
+._page-interactable {
+  @apply drop-shadow-lg hover:drop-shadow-xl rounded transition ease-out hover:-translate-y-3 duration-500 cursor-pointer;
+}
+
+.page-image {
+  @apply h-60 w-60 _page-interactable;
+}
+
 .page-card {
-  @apply drop-shadow-lg hover:drop-shadow-xl h-80 w-60 rounded transition ease-out hover:-translate-y-3 duration-500 cursor-pointer;
+  @apply h-80 w-60 _page-interactable;
 }
 
 .social-icon {
