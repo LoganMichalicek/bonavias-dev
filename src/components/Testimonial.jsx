@@ -2,7 +2,7 @@ import React from "react";
 
 const Testimonial = ({name, message}) => {
   return (
-    <div className="grid grid-cols-8">
+    <div className="grid grid-cols-8 gap-4">
       <svg
         className="h-6 w-6 place-self-center"
         xmlns="http://www.w3.org/2000/svg"

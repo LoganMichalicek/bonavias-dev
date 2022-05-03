@@ -3,7 +3,16 @@ module.exports = {
     "./src/**/*.{js,jsx,ts,tsx}",
   ],
   theme: {
-    extend: {},
+    extend: {
+      height: theme => ({
+        "screen/2": "50vh",
+        "screen/3": "calc(100vh / 3)",
+        "screen/4": "calc(100vh / 4)",
+        "screen/5": "calc(100vh / 5)",
+        "screen-almost-full": "95vh",
+        "screen-7/10": "70vh"
+      }),
+    },
   },
   plugins: [],
 }

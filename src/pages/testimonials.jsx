@@ -1,15 +1,15 @@
 import React, { useState } from "react";
 import Testimonial from "../components/Testimonial";
+import TestimonialBox from "../components/TestimonialBox";
 import data from "../content/testimonials.json";
-import { BsArrowLeft, BsArrowRight } from "react-icons/bs";
 import PageCard from "../components/PageCard";
 
 const Testimonials = () => {
   const keys = Object.keys(data);
-  const [currentTab, setCurrentTab] = useState(0);
-  const [ad_currentTab, ad_setCurrentTab] = useState(0);
-  const [pa_currentTab, pa_setCurrentTab] = useState(0);
-  const [fm_currentTab, fm_setCurrentTab] = useState(0);
+  // const [currentTab, setCurrentTab] = useState(0);
+  // const [ad_currentTab, ad_setCurrentTab] = useState(0);
+  // const [pa_currentTab, pa_setCurrentTab] = useState(0);
+  // const [fm_currentTab, fm_setCurrentTab] = useState(0);
 
   return (
     <div className="page-layout">
@@ -20,100 +20,10 @@ const Testimonials = () => {
         valued the resources and services they received. Under each subject
         matter category, here is what they had to say about us:
       </p>
-      <div className="inset-box py-4">
-        <div className="flex justify-between items-center content-center pb-4 border-b-2">
-          <button
-            className="cursor-pointer"
-            onClick={() => setCurrentTab((currentTab - 1) % keys.length)}
-          >
-            <BsArrowLeft />
-          </button>
-          <span className="">{keys[currentTab]}</span>
-          <button
-            className="cursor-pointer"
-            onClick={() => setCurrentTab((currentTab + 1) % keys.length)}
-          >
-            <BsArrowRight />
-          </button>
-        </div>
-        <div>
-          {data[keys[currentTab]].map((entry, idx) => {
-            return (
-              <Testimonial
-                key={idx}
-                name={entry.name}
-                message={entry.message}
-              />
-            );
-          })}
-        </div>
-      </div>
-      <div className="inset-box py-4">
-        <div className="grid lg:grid-cols-3 grid-cols-0 gap-10 mb-10">
-          <h1 className="place-self-center">Academic Developement</h1>
-          <h1 className="place-self-center">Professional Advancement</h1>
-          <h1 className="place-self-center">Financial Management</h1>
-          {/* <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris
-            pharetra sapien vitae ex consequat, at consectetur lorem
-            ullamcorper. Praesent urna felis, semper quis consequat vel,
-            volutpat in est. Nunc placerat iaculis diam, ac gravida purus
-            aliquet quis. Nunc ut ipsum libero. Sed auctor sed mi semper
-            pulvinar. Nulla at lectus nisl. Mauris faucibus nisl vitae dui
-            vulputate porttitor. Mauris et tincidunt sapien, ut ullamcorper
-            justo. Ut tempor, dui a consectetur pulvinar, dolor lorem fermentum
-            ex, varius commodo metus magna sed urna. Quisque aliquam efficitur
-            quam eget tristique. Proin mattis neque nec mauris dapibus
-            tincidunt. Nunc quis orci ut arcu pretium varius id non turpis.
-          </p>
-          <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris
-            pharetra sapien vitae ex consequat, at consectetur lorem
-            ullamcorper. Praesent urna felis, semper quis consequat vel,
-            volutpat in est. Nunc placerat iaculis diam, ac gravida purus
-            aliquet quis. Nunc ut ipsum libero. Sed auctor sed mi semper
-            pulvinar. Nulla at lectus nisl. Mauris faucibus nisl vitae dui
-            vulputate porttitor. Mauris et tincidunt sapien, ut ullamcorper
-            justo. Ut tempor, dui a consectetur pulvinar, dolor lorem fermentum
-            ex, varius commodo metus magna sed urna. Quisque aliquam efficitur
-            quam eget tristique. Proin mattis neque nec mauris dapibus
-            tincidunt. Nunc quis orci ut arcu pretium varius id non turpis.
-          </p>
-          <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris
-            pharetra sapien vitae ex consequat, at consectetur lorem
-            ullamcorper. Praesent urna felis, semper quis consequat vel,
-            volutpat in est. Nunc placerat iaculis diam, ac gravida purus
-            aliquet quis. Nunc ut ipsum libero. Sed auctor sed mi semper
-            pulvinar. Nulla at lectus nisl. Mauris faucibus nisl vitae dui
-            vulputate porttitor. Mauris et tincidunt sapien, ut ullamcorper
-            justo. Ut tempor, dui a consectetur pulvinar, dolor lorem fermentum
-            ex, varius commodo metus magna sed urna. Quisque aliquam efficitur
-            quam eget tristique. Proin mattis neque nec mauris dapibus
-            tincidunt. Nunc quis orci ut arcu pretium varius id non turpis.
-          </p> */}
-          <div>
-            <p>{data[keys[0]][ad_currentTab].message}</p>
-            <button
-              onClick={() =>
-                ad_setCurrentTab((ad_currentTab + 1) % data[keys[0]].length)
-              }
-            >{`Academic Dev #${ad_currentTab}`}</button>
-          </div>
-          <div>
-            <p>{data[keys[1]][pa_currentTab].message}</p>
-            <button
-              onClick={() => pa_setCurrentTab((pa_currentTab + 1) % 10)}
-            >{`Professional Adv #${pa_currentTab}`}</button>
-          </div>
-          <div>
-            <p>{data[keys[2]][fm_currentTab].message}</p>
-            <button
-              onClick={() => fm_setCurrentTab((fm_currentTab + 1) % 10)}
-            >{`Financial Mgt #${fm_currentTab}`}</button>
-          </div>
-        </div>
-      </div>
+      {keys.map((key, idx) => {
+        return <TestimonialBox key={idx} section={key} data={data[key]}/>
+      })}
+      {/* <TestimonialBox section={keys[0]} data={data[keys[0]]}/> */}
       <div className="py-4">
         <h2 className="section-header">Letters</h2>
         <p>
